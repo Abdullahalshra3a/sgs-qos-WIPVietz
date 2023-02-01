@@ -1,0 +1,11 @@
+*.exe
+
+# Ignore virutal env + pycache
+CSP/venv/
+CSP/__pycache__/
+
+# Ignore all .idea files
+**/.idea/
+/CSP/minizinc_data/model-instance_NONE.dzn
+/CSP/minizinc_data/network_model.mzn
+/results/
