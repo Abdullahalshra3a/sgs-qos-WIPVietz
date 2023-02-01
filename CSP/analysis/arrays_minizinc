@@ -1,0 +1,10 @@
+include "all_different.mzn";
+set of int: A;
+set of int: B;
+array[A] of var B: arr; %arr[A][B]
+var set of B: X; %var 1..5 X
+var set of B: Y; %var 1..5 Y
+
+constraint all_different(arr);
+constraint forall (i in index_set(arr)) ( arr[i] in X ); % = B
+constraint forall (i in index_set(arr)) ( (arr[i] mod 2 = 0) <-> arr[i] in Y );
